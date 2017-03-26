@@ -1,0 +1,78 @@
+/*检测到当前网页不是中文网页，是否要翻译成中文？*/
+/*翻译不翻译本网站中不再提示*/
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+/* Clouds */
+#clouds {
+    top: 60%;
+    position: relative;
+    -webkit-animation: move 40s infinite linear;
+    -moz-animation: move 40s infinite linear;
+    -ms-animation: move 40s infinite linear;
+    z-index: 1;
+}
+
+#clouds2 {
+    position: relative;
+    -webkit-animation: backup 24s infinite linear;
+    -moz-animation: backup 24s infinite linear;
+    -ms-animation: backup 24s infinite linear;
+    z-index: 2;
+}
+
+#clouds .cloud1, #clouds .cloud2, #clouds .cloud2:after, #clouds .cloud2:before, #clouds .cloud3, #clouds .cloud1:after, #clouds .cloud1:before, #clouds .cloud3:before, #clouds .cloud3:after {
+    background: #beade9;
+    /* 	box-shadow: 0px 0px 20px 5px #beade9;	 */
+    /* 	-moz-box-shadow: 0px 0px 20px 5px #beade9;	 */
+    /* 	-webkit-box-shadow: 0px 0px 20px 5px #beade9; */
+}
+
+@-webkit-keyframes move {
+    0% {left: 0px;}
+    49% {left: 1000px; opacity: 1;}
+    50% {left: 1000px; opacity: 0;}
+    51% {left: -1000px; opacity: 0;}
+    52% {left: -1000px; opacity: 1;}
+    100% {left: 0px;}
+}
+
+@-webkit-keyframes backup {
+    0% {left: -1000px;}
+    100% {left: 1000px;}
+}
+
+@-moz-keyframes move {
+    0% {left: 0px;}
+    49% {left: 1000px; opacity: 1;}
+    50% {left: 1000px; opacity: 0;}
+    51% {left: -1000px; opacity: 0;}
+    52% {left: -1000px; opacity: 1;}
+    100% {left: 0px;}
+}
+
+@-moz-keyframes backup {
+    0% {left: -1000px;}
+    100% {left: 1000px;}
+
+}
+
+@-ms-keyframes move {
+    0% {left: 0px;}
+    49% {left: 1000px; opacity: 1;}
+    50% {left: 1000px; opacity: 0;}
+    51% {left: -1000px; opacity: 0;}
+    52% {left: -1000px; opacity: 1;}
+    100% {left: 0px;}
+}
+
+@-ms-keyframes backup {
+    0% {left: -1000px;}
+    100% {left: 1000px;}
+
+}
+
